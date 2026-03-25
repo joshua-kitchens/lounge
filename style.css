@@ -1,0 +1,167 @@
+/* =========================================
+   Lorazepam Lounge — Menu Styles
+   Palette: forest green / teal / gold / cream
+   ========================================= */
+
+:root {
+  --bg:        #0a3d2e;
+  --bg-card:   #0d4a38;
+  --teal:      #4a8c7a;
+  --teal-light:#6db8a0;
+  --gold:      #c9a870;
+  --gold-light:#e2c99a;
+  --cream:     #f5f0e8;
+  --muted:     #a8c4b8;
+  --border:    rgba(201, 168, 112, 0.25);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(74, 140, 122, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(201, 168, 112, 0.08) 0%, transparent 60%);
+  color: var(--cream);
+  font-family: 'Lora', Georgia, serif;
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+}
+
+/* ---- HEADER ---- */
+header {
+  text-align: center;
+  padding: 2rem 0 1.5rem;
+}
+
+.logo {
+  width: min(280px, 60vw);
+  height: auto;
+  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5));
+}
+
+.tagline {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+/* ---- MAIN ---- */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/* ---- SECTION ---- */
+.menu-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.3rem, 4vw, 1.75rem);
+  font-weight: 600;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.title-leaf {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+/* ---- MENU GRID ---- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--border);
+}
+
+/* ---- MENU ITEM ---- */
+.menu-item {
+  background-color: var(--bg-card);
+  padding: 1.1rem 1.4rem;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #0f5840;
+}
+
+.item-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+
+.item-desc {
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ---- DIVIDER ---- */
+.divider {
+  text-align: center;
+  color: var(--gold);
+  opacity: 0.5;
+  letter-spacing: 0.6em;
+  font-size: 0.75rem;
+  margin: 2.5rem 0;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  color: var(--teal);
+  opacity: 0.6;
+  letter-spacing: 0.08em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-location {
+  line-height: 1.6;
+}
+
+footer a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 520px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
