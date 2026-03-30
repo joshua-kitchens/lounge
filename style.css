@@ -44,6 +44,15 @@ header {
   filter: drop-shadow(0 4px 24px rgba(0,0,0,0.5));
 }
 
+.menu-dates {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
 .tagline {
   font-family: 'Cinzel', serif;
   font-size: clamp(0.75rem, 2vw, 0.95rem);
