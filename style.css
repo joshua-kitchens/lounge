@@ -46,7 +46,7 @@ header {
 
 .menu-dates {
   font-family: 'Cinzel', serif;
-  font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+  font-size: clamp(1rem, 3vw, 1.15rem);
   letter-spacing: 0.2em;
   color: var(--gold);
   margin-top: 0.5rem;
@@ -55,7 +55,7 @@ header {
 
 .tagline {
   font-family: 'Cinzel', serif;
-  font-size: clamp(0.75rem, 2vw, 0.95rem);
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--teal-light);
@@ -118,7 +118,7 @@ main {
 
 .item-name {
   font-family: 'Cinzel', serif;
-  font-size: 1rem;
+  font-size: clamp(1rem, 3vw, 1.15rem);
   font-weight: 600;
   color: var(--gold-light);
   letter-spacing: 0.04em;
@@ -126,9 +126,9 @@ main {
 }
 
 .item-desc {
-  font-size: 0.875rem;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.6;
   font-style: italic;
 }
 
@@ -172,5 +172,13 @@ footer a:hover {
 @media (max-width: 520px) {
   .menu-grid {
     grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 1rem 0.75rem 3rem;
+  }
+
+  .menu-item {
+    padding: 1rem 1.1rem;
   }
 }
